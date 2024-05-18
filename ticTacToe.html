@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <script >var turn="X";
+        class opt{
+            constructor(state){
+               this.state=state;
+            }
+        }
+        let Iswin=false
+        let num = 0;
+        let one = new opt
+        let two = new opt
+        let three = new opt
+        let four = new opt
+        let five = new opt
+        let six = new opt
+        let seven = new opt
+        let eight = new opt
+        let nine = new opt
+        function game(){
+            num+=1;
+            turn=="X"?turn="O":turn="X";
+            document.getElementById("turn").innerHTML=`${turn} turn `;
+            turn=="X"?turn="O":turn="X";
+            function checkingWin(One,Two,Three){
+               One.state==turn?(Two.state==turn?(Three.state==turn?Iswin=true:console.log()):console.log()):console.log();
+                return Iswin;
+            }
+            if(checkingWin(one,two,three)||checkingWin(one,five,nine)||checkingWin(one,four,seven)||
+               checkingWin(two,five,eight)||checkingWin(three,six,nine,)||checkingWin(three,five,seven)||
+               checkingWin(four,five,six)||checkingWin(seven,eight,nine)){
+            document.getElementById("turn").innerHTML=`${turn} is the winner🏆`;
+               }
+               turn=="X"?turn="O":turn="X";
+               num==9?document.getElementById("turn").innerHTML=`game draw `:console;
+              
+        
+        }
+        
+        </script>
+
+    <style> .container{
+        width: 60vw;
+        height: 60vh;
+        display: block;
+    } 
+    body{
+        background: linear-gradient( rgb(111, 202, 255), rgb(55, 0, 123));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+     #play{
+        background-color: rgb(8, 230, 85);
+        color: rgb(0, 67, 9);
+        width: 11vw;
+        height: 7vh;
+        margin-left: 45vw;
+        margin-top: 6vh;
+        font-size: 4vh;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        border-radius: 15px;
+    } 
+    #play:hover{
+        background-color: rgb(3, 169, 61);
+
+    }
+    .opt{
+        height: 20vh;
+        width: 20vw;
+        display: inline-block;
+        justify-content: center;
+        text-align: center;
+        font-size: 18vh;
+        background-color: rgba(0, 0, 0, 0);
+        font-family: 'Courier New', Courier, monospace;
+        padding: 0px;
+    }
+    .error{
+        color: rgba(0, 0, 0, 0);
+    }
+    body{
+        background: linear-gradient(rgb(63, 140, 255),rgb(55, 0, 123));
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    #turn{
+        text-align: center;
+        height: 10vh;
+        font-size: 8vh;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+    
+    </style>
+</head>
+<body>
+    <div id="turn">X turn</div>
+    <div id="container"></div>
+        <div id="one" class="opt error" onclick="if(!Iswin){let btn1 = document.getElementById('one');btn1.setAttribute('onclick','');btn1.setAttribute('class','opt');one.state=turn; btn1.innerHTML=turn;game();};
+        " style="margin-left: 20vw;margin-top: 10vh; border-bottom:2px solid #ffffff;">k</div>
+         <div id="two" class="opt error" onclick="if(!Iswin){let btn2 =document.getElementById('two');btn2.setAttribute('onclick','');btn2.setAttribute('class','opt');two.state=turn;btn2.innerHTML=turn;game();};
+        " style="margin-top: 10vh; border-bottom:2px solid white;border-left:2px solid white;">k</div>
+         <div id="three" class="opt error" onclick="if(!Iswin){let btn3 = document.getElementById('three');btn3.setAttribute('onclick','');btn3.setAttribute('class','opt');three.state=turn;btn3.innerHTML=turn;game();};
+        "style="margin-top: 10vh; border-bottom:2px solid white;border-left:2px solid white;" >k</div> <br>
+         <div id="four" class="opt error" onclick="if(!Iswin){let btn4 = document.getElementById('four');btn4.setAttribute('onclick','');btn4.setAttribute('class','opt');four.state=turn;btn4.innerHTML=turn;game();}
+        " style="margin-left: 20vw; border-bottom:2px solid white;">k</div>
+         <div id="five" class="opt error" onclick="if(!Iswin){let btn5 = document.getElementById('five');btn5.setAttribute('onclick',''); btn5.setAttribute('class','opt');five.state=turn;btn5.innerHTML=turn;game();}
+        "style="border-bottom:2px solid white;border-left:2px solid white;">k</div>
+         <div id="six" class="opt error" onclick="if(!Iswin){let btn6 = document.getElementById('six');btn6.setAttribute('onclick','');btn6.setAttribute('class','opt');six.state=turn;btn6.innerHTML=turn;game();}
+        "style=" border-bottom:2px solid white;border-left:2px solid white;">k</div><br>
+         <div id="seven" class="opt error" onclick="if(!Iswin){let btn7 = document.getElementById('seven');btn7.setAttribute('onclick','');btn7.setAttribute('class','opt');seven.state=turn;btn7.innerHTML=turn;game();}
+        " style="margin-left: 20vw; ">k</div>
+         <div id="eight" class="opt error" onclick="if(!Iswin){let btn8 = document.getElementById('eight');btn8.setAttribute('onclick','');btn8.setAttribute('class','opt');eight.state=turn;btn8.innerHTML=turn;game();}
+        "style="border-left:2px solid white;">k</div>
+         <div id="nine" class="opt error" onclick="if(!Iswin){let btn9 = document.getElementById('nine');btn9.setAttribute('onclick','');btn9.setAttribute('class','opt');nine.state=turn;btn9.innerHTML=turn;game();}
+        "style="border-left:2px solid white;">k</div>
+    </div>
+     <br> 
+    </body>
+</html>
