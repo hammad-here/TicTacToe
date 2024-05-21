@@ -1,0 +1,50 @@
+.container{
+    width: 60vw;
+    height: 60vh;
+    display: block;
+} 
+body{
+    background: linear-gradient( rgb(111, 202, 255), rgb(55, 0, 123));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+ #play{
+    background-color: rgb(8, 230, 85);
+    color: rgb(0, 67, 9);
+    width: 11vw;
+    height: 7vh;
+    margin-left: 45vw;
+    margin-top: 6vh;
+    font-size: 4vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 15px;
+} 
+#play:hover{
+    background-color: rgb(3, 169, 61);
+
+}
+.opt{
+    height: 20vh;
+    width: 20vw;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+    font-size: 18vh;
+    background-color: rgba(0, 0, 0, 0);
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0px;
+}
+.error{
+    color: rgba(0, 0, 0, 0);
+}
+body{
+    background: linear-gradient(rgb(63, 140, 255),rgb(55, 0, 123));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#turn{
+    text-align: center;
+    height: 10vh;
+    font-size: 8vh;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
